@@ -4,8 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+   <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>   
+   
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -15,12 +21,19 @@
 <body>
 
   <style>
+
+    body{
+      font-family: 'Roboto', sans-serif;
+    }
     .header{
     background-color: #4A87DC;
     /* width: 100%; */
     }
-    .space-30px{
+    .spacer-30px{
       height: 30px;
+    }
+    .spacer-24px{
+      height: 24px;
     }
     .float-left{
       float: left;
@@ -42,26 +55,216 @@
       color: #ffffff;
       font-weight: 100;
       font-size: 20px;
+      display: inline-block;
+      padding-left: 16px;
+      padding-right: 8px;
+      position: relative;
+      top: -7px !important;
     }
 
-   
-    
+    .user-name-group{
+      text-align: right;
+    }
+
+   .fa-user-circle{
+     color: #ffffff;
+     font-size: 34px;
+   }
+
+  .fa-angle-down{
+    color: #ffffff;
+    /* font-size: 5px; */
+    position: relative;
+    top: -7px !important;
+  }
+  .navigation-list{
+    display: inherit;
+    list-style-type: none;
+    margin-bottom: 0px;
+    padding-right: 0px;
+    color: #ffffff;
+    font-weight: 100;
+    padding-bottom: 3px;
+  }
+
+  .navigation-list li{
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 14px;
+    display: inline;
+    padding-bottom: 15px;
+  }
+
+  .navigation-list li:hover{
+    text-decoration: none;
+    border-bottom: 4px solid #ffffff;
+  }
+
+  .navigation-list-active{
+    text-decoration: none;
+    border-bottom: 4px solid #ffffff;
+  }
+
+  .navigation-list-move-right{
+    direction: rtl;
+
+  }
+
+  .section-controller-group{
+     background-color: #FAFAFA;
+     height: 300px;
+  }
+  .dropdown-toggle{
+    width: 100%;
+    text-align: left;
+  }
+ .dropdown-text{
+   display: initial;
+ }
+
+.dropdown-toggle::after{
+  /* margin-left: 27.855em !important; */
+  color: #4A87DC !important;
+  text-align: right;
+  float: right;
+  position: relative;
+  top: 9px;
+  /* position: relative;
+  left: 342px; */
+}
+
+.btn-secondary{
+  background-color: #FAFAFA !important;
+  color: #494949 !important;
+  box-shadow: none !important;
+  font-size: 14px;
+  border: 1px solid #B5B5B5 !important;	
+  border-radius: 3px;
+}
+
+.btn-secondary:hover{
+  background-color: #FAFAFA;
+  color: #494949;
+}
+
+.btn-secondary:active{
+  background-color: #FAFAFA;
+  color: #494949;
+}
+.dropdown-menu{
+  width: 100% !important;
+  color: #494949 !important;
+  box-shadow: none !important;
+  font-size: 14px;
+  border: 1px solid #B5B5B5 !important;	
+  border-radius: 3px;
+}
+
+.dropdown-label{
+  margin-bottom: 6px !important;
+  font-size: 14px;
+  color: #9B9B9B !important;
+}
+
     </style>
 
     <header class="header">
-       <div class="container">
-            <div class="space-30px"></div>
+       
+      
+      <div class="container">
+            
+            <div class="spacer-30px"></div>
+            
             <div class="row">
-              <div class="col-sm-6">
-                <h1 class="logo float-left">YourSeat</h1>
-              </div>
-              <div class="col-sm-6 user-name-group">
-                  <h1 class="user-name float-right">Brian</h1>
-                  <i class="fas fa-user-circle"></i>
+
+                <div class="col-sm-6">
+                  <h1 class="logo float-left">YourSeat</h1>
                 </div>
-            </div>
-            <div class="space-30px"></div>
-        </div>
+
+                <div class="col-sm-6 user-name-group">
+                    <i class="fas fa-user-circle"></i>
+                    <h1 class="user-name">Brian</h1>
+                    <i class="fa fa-angle-down"></i>
+                </div>
+           
+              </div>
+
+              <div class="spacer-30px"></div>
+
+              <div class="row navigation-list-move-right">
+                      <ul class="navigation-list">
+                        <li>Response</li> <div class="divider">|</div> 
+                        <li>Budget</li><div class="divider">|</div>  
+                        <li>Performance</li> <div class="divider">|</div> 
+                        <li class="navigation-list-active">Summary</li>
+                      </ul>
+                  </div>
+       </div> <!-- end of container -->    
     </header>
+      
+    <div class="section-controller-group">
+
+        <div class="container">
+
+
+               <div class="spacer-24px"></div>
+
+                      <div class="row">
+
+                        <div class="col-sm-6">
+
+                          <div class="dropdown">
+                             <label class="dropdown-label" for="">ORGANIZATIONS</label>
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="dropdown-text">Children's Mental Health</div>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-sm-3">
+                      
+                            <div class="dropdown">
+                               <label class="dropdown-label" for="">START DATE</label>
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <div class="dropdown-text">Children's Mental Health</div>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </div>
+  
+                          </div>
+
+                          <div class="col-sm-3">
+                      
+                              <div class="dropdown">
+                                 <label class="dropdown-label" for="">END DATE</label>
+                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="dropdown-text">Children's Mental Health</div>
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                  </div>
+                                </div>
+    
+                            </div>                          
+
+                      </div><!--  end of row -->
+
+        </div>
+  
+   </div>
+           
+
 </body>
 </html>
