@@ -363,7 +363,15 @@ p + p {
 }
 .icon-center{
   text-align: center;
+  display: inherit;
+  vertical-align: middle;
 }
+.icon-label{
+  color: #6E7276;
+  font-size: 10px;
+  text-align: center;
+}
+
 /* .control-box-view{
   width: 
 } */
@@ -484,8 +492,12 @@ p + p {
             <div class="wrap">
               <div class="control-box-view">
                   <i class="fal fa-eye icon-center"></i>
+                  <label class="icon-label" for="">View</label>
               </div>
-              <div class="control-box-edit"></div>
+              <div class="control-box-edit">
+                  <i class="fal fa-pencil-alt icon-center"></i>
+                  <label class="icon-label" for="">Edit</label>
+              </div>
             </div>
           </div>
        
