@@ -10,7 +10,7 @@
 
      <!-- Font Awesome -->
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-87DrmpqHRiY8hPLIr7ByqhPIywuSsjuQAfMXAE0sMUpY3BM7nXjf+mLIUSvhDArs" crossorigin="anonymous">
     <!--  Dropdown -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 
@@ -195,7 +195,7 @@
 .summary-chart-container {
 	background-color: #FFFFFF;
   box-shadow: 0 0 4px 0 #B5B5B5;
-  padding-left: 24px;
+  padding-left: 66px;
   padding-right: 24px;
 }
 
@@ -241,6 +241,8 @@
   display: inline-block;
   width: 110px;
   margin: 40px auto 20px;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
   padding: 0 10px;
 }
 
@@ -314,6 +316,17 @@ p + p {
   font-size: 40px;  
   letter-spacing: 0.53px;
 }
+.chart-label{
+  color: #494949;
+  font-size: 16px;
+  letter-spacing: 0.19px;
+  text-align: center;
+  position: relative;
+  left: -21px;
+}
+.fa-long-arrow-up-positive{
+  color: #abe9de;
+}
 
 
 </style>
@@ -335,6 +348,7 @@ p + p {
 
                 <div class="col-sm-6 user-name-group">
                     <i class="fas fa-user-circle"></i>
+                    <i class="fal fa-arrow-up"></i>
                     <h1 class="user-name">Brian</h1>
                     <i class="fa fa-angle-down"></i>
                 </div>
@@ -436,19 +450,63 @@ p + p {
 
                 <div class="col-md-4">
                     
-                    
-                    <div class="chart" data-percent="73"><span class="chart-data">73</span>%</div>
-
-
+                    <h1 class="chart-label">POSITIVE</h1>
+                    <div class="spacer-41px"></div>
+                    <div class="chart chart1" data-percent="60"><span class="chart-data">60</span>%</div>
+                    <div class="spacer-41px"></div>
+        
+                    <h1 class="chart-label"> <i class="fa fa-long-arrow-up fa-long-arrow-up-positive"></i> 1% since last month</h1>
                 </div> <!-- end of col-md-4 -->
+
+                <div class="col-md-4">
+                    
+                    <h1 class="chart-label">NEUTRAL</h1>
+                    <div class="spacer-41px"></div>
+                    <div class="chart chart2" data-percent="10"><span class="chart-data">10</span>%</div>
+                    <div class="spacer-41px"></div>
+                </div> <!-- end of col-md-4 -->
+
+                <div class="col-md-4">
+                    
+                    <h1 class="chart-label">NEGATIVE</h1>
+                    <div class="spacer-41px"></div>
+                    <div class="chart chart3" data-percent="30"><span class="chart-data">30</span>%</div>
+                    <div class="spacer-41px"></div>
+                </div> <!-- end of col-md-4 -->
+            
+
             </div>
         
           </div>
 
 <script>
+
+  function checkColor(){
+   var x = document.getElementsByClassName("chart-label")
+   for (var i = 0; i < x.length; i++){
+     var text = x[i].innerHTML;
+      if (text === "POSITIVE"){
+          return '#abe9de'
+      }
+      else if (text === "NEUTRAL"){
+          console.log('got down here!!!')
+          return 'blue'
+      }
+      else if (text === "NEGATIVE"){
+          return 'yellow'
+      }  
+   }
+
+  }
+
+
+
+
+
   $(function() {
-  $('.chart').easyPieChart({
-    // The color of the curcular bar. You can pass either a css valid color string like rgb, rgba hex or string colors. But you can also pass a function that accepts the current percentage as a value to return a dynamically generated color.
+
+
+  $('.chart1').easyPieChart({
     barColor: '#abe9de',
     // The color of the track for the bar, false to disable rendering.
     trackColor: '#f2f2f2',
@@ -457,9 +515,30 @@ p + p {
     // Defines how the ending of the bar line looks like. Possible values are: butt, round and square.
     lineCap: 'round',
     // Width of the bar line in px.
-    lineWidth: 7,
+    lineWidth: 14,
     // Size of the pie chart in px. It will always be a square.
-    size: 190,
+    size: 290,
+    // Time in milliseconds for a eased animation of the bar growing, or false to deactivate.
+    animate: 1000,
+    // Callback function that is called at the start of any animation (only if animate is not false).
+    onStart: $.noop,
+    // Callback function that is called at the end of any animation (only if animate is not false).
+    onStop: $.noop
+ 
+ });
+
+    $('.chart2').easyPieChart({
+    barColor: '#ddc6e5',
+    // The color of the track for the bar, false to disable rendering.
+    trackColor: '#f2f2f2',
+    // The color of the scale lines, false to disable rendering.
+    scaleColor: 'white',
+    // Defines how the ending of the bar line looks like. Possible values are: butt, round and square.
+    lineCap: 'round',
+    // Width of the bar line in px.
+    lineWidth: 14,
+    // Size of the pie chart in px. It will always be a square.
+    size: 290,
     // Time in milliseconds for a eased animation of the bar growing, or false to deactivate.
     animate: 1000,
     // Callback function that is called at the start of any animation (only if animate is not false).
@@ -467,13 +546,160 @@ p + p {
     // Callback function that is called at the end of any animation (only if animate is not false).
     onStop: $.noop
   });
+
+      $('.chart3').easyPieChart({
+    barColor: '#f8c3bb',
+    // The color of the track for the bar, false to disable rendering.
+    trackColor: '#f2f2f2',
+    // The color of the scale lines, false to disable rendering.
+    scaleColor: 'white',
+    // Defines how the ending of the bar line looks like. Possible values are: butt, round and square.
+    lineCap: 'round',
+    // Width of the bar line in px.
+    lineWidth: 14,
+    // Size of the pie chart in px. It will always be a square.
+    size: 290,
+    // Time in milliseconds for a eased animation of the bar growing, or false to deactivate.
+    animate: 1000,
+    // Callback function that is called at the start of any animation (only if animate is not false).
+    onStart: $.noop,
+    // Callback function that is called at the end of any animation (only if animate is not false).
+    onStop: $.noop
+  });
+
+
+
+
+      var counter = 0 
+
   $('.applyBtn').on('click', function(e) {
     e.preventDefault();
-    var newValue = Math.floor(100 * Math.random());
-    $('.chart').data('easyPieChart').update(newValue);
-    $('span', $('.chart')).text(newValue);
+    counter++
+    previousNumber = counter - 1
+    console.log(previousNumber)
+    var array1 = [40, 30, 10]
+    var array2 = [80, 15, 5]
+    var array3 = [34, 65, 1]
+    var array4 = [72, 13, 15]
+    var array5 = [23, 9, 68]
+    var array6 = [62, 22, 16]
+    var array7 = [44, 40, 16]
+    var array8 = [80, 12, 8]
+    var array9 = [66, 33, 1]
+    var array10 = [86, 4, 10]
+
+    console.log(counter)
+    $('.chart').each(function(index, elem){
+      
+      if (counter === counter ){
+        
+        var value = array1[index]
+
+        console.log($(elem))
+        
+        $(elem).find('span').text(value)
+
+        $(elem).data('easyPieChart').update(value)
+
+      }
+
+      if (counter === 2){
+
+        var value = array2[index]
+        
+        $(elem).find('span').text(value)
+
+        $(elem).data('easyPieChart').update(value)
+
+      }
+
+      if (counter === 3){
+
+      var value = array3[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      }  
+      
+      if (counter === 4){
+
+      var value = array4[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      }  
+
+      if (counter === 5){
+
+      var value = array4[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      }  
+
+      if (counter === 6){
+
+      var value = array4[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      }  
+
+      if (counter === 7){
+
+      var value = array4[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      }  
+
+      if (counter === 8){
+
+      var value = array4[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      }  
+
+      if (counter === 9){
+
+      var value = array4[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      }  
+
+      if (counter === 10){
+
+      var value = array4[index]
+
+      $(elem).find('span').text(value)
+
+      $(elem).data('easyPieChart').update(value)
+
+      counter = 0
+
+      }  
+
+    })
+
   });
 });
+
 </script>
 
  
