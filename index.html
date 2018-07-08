@@ -431,6 +431,14 @@ p + p {
 
 }
 
+a {
+  color: #ffffff;
+}
+
+a:hover{
+  color: #ffffff;
+  text-decoration: none;
+}
 /* .control-box-view{
   width: 
 } */
@@ -464,10 +472,10 @@ p + p {
 
               <div class="row navigation-list-move-right">
                       <ul class="navigation-list">
-                        <li>Response</li> <div class="divider">|</div> 
-                        <li>Budget</li><div class="divider">|</div>  
-                        <li>Performance</li> <div class="divider">|</div> 
-                        <li class="navigation-list-active">Summary</li>
+                        <li><a href="pages/response.html"  class="link" href="">Response</a></li><div class="divider">|</div> 
+                        <li><a href="pages/budget.html" class="link" href="">Budget</a></li><div class="divider">|</div> 
+                        <li><a href="pages/performance.html" class="link" href="">Performance</a></li><div class="divider">|</div> 
+                        <li><a href="pages/summary.html" class="link" href="">Summary</a></li></div> 
                       </ul>
                   </div>
        </div> <!-- end of container -->    
@@ -513,15 +521,15 @@ p + p {
                         <div class="col-sm-3">
                             <div class="dropdown">
                                 <label class="dropdown-label" for="">DATE RANGE</label>  
-                                <i class="fal fa-calendar-alt"></i> 
-                                <input class="btn btn-secondary dropdown-toggle" type="text" name="daterange" value="01/01/2018 - 01/15/2018"/>
-                                 
+                                <i class="fal fa-calendar-alt calendar"></i> 
+                                <input class="btn btn-secondary dropdown-toggle calendar" type="text" name="daterange" value="01/01/2018 - 01/15/2018"/>
+                                   
                               </div>
                         </div> 
                         
                         <script>
                             $(function() {
-                              $('input[name="daterange"]').daterangepicker({
+                              $('.calendar').daterangepicker({
                                 opens: 'left'
                               }, function(start, end, label) {
                                 console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
