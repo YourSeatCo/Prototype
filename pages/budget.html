@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+    axisY:{
+lineThickness:0,
+tickThickness:0,
+gridThickness: 0,
+valueFormatString:" ",//space
+},
+axisX:{
+lineThickness:0,
+tickThickness:0,
+valueFormatString:" ",//space
+},
+	data: [{
+		type: "bar",
+		color: "#b7ddf2",
+		dataPoints: [
+			{ y: 10, label: "Strongly Disagree" },
+			{ y: 10, label: "Disagree" },
+			{ y: 50, label: "Neutral" },
+			{ y: 20, label: "Agree" },
+			{ y: 100, label: "Strongly Agree" }
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
