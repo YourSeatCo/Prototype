@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
 
-    <title>Washington County - Performance</title>
+    <title>Montgomery County - Performance</title>
     <link rel="icon" type="image/x-icon" href="Favicon.png">
     
     <!-- Roboto Font -->
@@ -661,8 +661,8 @@ html {
 
               <div class="row navigation-list-move-right">
                       <ul class="navigation-list">
-                        <li><a href="response.html"  class="link" href="">Response</a></li><div class="divider">|</div> 
-                        <li><a href="budget.html" class="link" href="">Budget</a></li><div class="divider">|</div> 
+                        <!-- <li><a href="response.html"  class="link" href="">Response</a></li><div class="divider">|</div>  -->
+                        <li><a href="budget.html" class="link" href="">Clients</a></li><div class="divider">|</div> 
                         <li><a href="performance.html" class="link link--currentPage" href="">Performance</a></li><div class="divider">|</div> 
                         <li><a href="../index.html" class="link" href="">Summary</a></li></div> 
                       </ul>
@@ -684,12 +684,13 @@ html {
                             <div class="dropdown">
                                 <label class="dropdown-label" for="">PROGRAMS</label>
                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                   <div id="changeValue" class="dropdown-text-program1 dropdown-text">Group Resident Housing | Human Services</div>
+                                   <div id="changeValue" class="dropdown-text-program1 dropdown-text">Family Reunification | Social Services</div>
                                  </button>
                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
                                    <a class="dropdown-item all dropdown-item-programs dropdown-item-top bold">All</a>
-                                   <a class="dropdown-item childs-health dropdown-item-programs">Group Resident Housing</a>
-                                   <a class="dropdown-item vets-health dropdown-item-programs ">Mobile Transporation</a>
+                                   <a class="dropdown-item childs-health dropdown-item-programs">Family Reunification</a>
+                                   <a class="dropdown-item vets-health dropdown-item-programs ">Substance Abuse & Preventation</a>
+                                   <a class="dropdown-item vets-health dropdown-item-programs ">Foster Care</a>
                                  </div>
                                </div>
    
@@ -700,7 +701,7 @@ html {
                             <div class="dropdown">
                                 <label class="dropdown-label" for="">DATE RANGE</label>  
                                 <i class="fal fa-calendar-alt calendar"></i> 
-                                <input class="btn btn-secondary dropdown-toggle data-range calendar" type="text" name="daterange" value="01/01/2018 - 08/09/2018"/>
+                                <input class="btn btn-secondary dropdown-toggle data-range calendar" type="text" name="daterange" value="01/01/2019 - 04/01/2019"/>
                                    
                               </div>
                         </div> 
@@ -726,30 +727,6 @@ html {
                       <div class="spacer-24px"></div>
 
                       <div class="row">
-            
-                          <div class="col-sm-3">
-  
-                            <div class="dropdown">
-                               <label class="dropdown-label" for="">PROVIDER</label>
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                  <div id="changeValue-provider"  class="dropdown-text">All</div>
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
-                                    <a class="dropdown-item dropdown-item-provider">All</a> 
-                                    <a onclick="positiveData_Helping()" class="dropdown-item dropdown-item-provider bold">A Helping Hand</a> 
-                                    <a class="dropdown-item dropdown-item-provider childs-health">Union Gospel Mission</a>
-                                    <a onclick="positiveData_Family()" class="dropdown-item dropdown-item-provider childs-health">The Family Place</a>
-                                    <a class="dropdown-item dropdown-item-provider childs-health">Naomi Family Residence</a>
-                                    <a class="dropdown-item dropdown-item-provider childs-health">Kingdom Pathways Outreach</a>
-                                    <a onclick="positiveData_People()" class="dropdown-item dropdown-item-provider childs-health">People Serving People</a>
-                                    <a onclick="negativeData_Refugge()" class="dropdown-item dropdown-item-provider vets-health">The Refuge</a>
-                                    <a onclick="negativeData_Stepping()" class="dropdown-item dropdown-item-provider vets-health">Stepping Stone Emergency</a>
-                                    <a onclick="negativeData_Higher()" class="dropdown-item dropdown-item-provider vets-health">Higher Ground Shelter</a>
-                                    
-                                </div>
-                              </div>
-  
-                          </div>
   
                           <div class="col-sm-3">
                   <div class="dropdown">
@@ -768,7 +745,7 @@ html {
                          <a onclick="changeData_pre()" class="dropdown-item dropdown-item-client" href="#">Carter, Elliott</a>
                          <a onclick="changeData_pre()" class="dropdown-item dropdown-item-client" href="#">Cather, Willa</a>
                          <a onclick="changeData_pre()" class="dropdown-item dropdown-item-client" href="#">Chapin, Harry</a>
-                         <a onclick="changeData_pre()" class="dropdown-item dropdown-item-client" href="#">Chicago, Judy</a>
+                         <a onclick="negativeData_Stepping()" class="dropdown-item dropdown-item-client" href="#">Chicago, Judy</a>
                          <a onclick="changeData_pre()" class="dropdown-item dropdown-item-client" href="#">Dauten, Dale</a>
                        </div>
                   </div>
@@ -830,18 +807,7 @@ html {
                   </script> 
 
                           <div class="col-sm-3">
-                  <div class="dropdown">
-                      <label class="dropdown-label" for="">SEGMENT</label>
-                       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                         <div class="dropdown-text">All</div>
-                       </button>
-                       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
-                         <a class="dropdown-item bold" href="#">All</a>
-                         <a class="dropdown-item" href="#">Non-medicare</a>
-                         <a class="dropdown-item" href="#">Medicare</a>
-                         <a class="dropdown-item" href="#">GRH-return</a>
-                       </div>
-                  </div>
+
          
               </div> 
               
@@ -914,8 +880,8 @@ html {
           <div class="spacer-16px"></div>
           <div class="row">
             <div class="no-col-padding col-md-6">
-                <h1 class="program-header">Group Resident Housing</h1>
-                    <h2 class="program-description">Increase client's experience in provider housing providing food and shelter</h2>
+                <h1 class="program-header">Family Reunification</h1>
+                    <h2 class="program-description">Increase client's parenting skills in supporting child's needs</h2>
             </div>
             
          </div> <!-- end of row -->
@@ -960,7 +926,7 @@ html {
 
                 <div class="col-md-4">
                     
-                    <h1 class="chart-section-label">LENGTH OF STAY</h1>
+                    <h1 style="padding-left: 47px;" class="chart-section-label">PROGRAM COMPLETION RATE</h1>
                     <div class="spacer-41px"></div>
                     <div class="row">
                         <div class="col-sm-6">
@@ -971,9 +937,9 @@ html {
 
                         <div class="col-sm-6">
                           <div class="chart-label-group">
-                              <p class="chart-label"><span style="background-color: #abe9de" class="dot"></span> 0 - 30 Days</p>
-                              <p class="chart-label"><span style="background-color: #ddc6e5" class="dot"></span> 60 - 90 Days</p>
-                              <p class="chart-label"><span style="background-color: #f8c3bb" class="dot"></span> 90 Days +</p>
+                              <p class="chart-label"><span style="background-color: #abe9de" class="dot"></span> 0 - 25%</p>
+                              <p class="chart-label"><span style="background-color: #ddc6e5" class="dot"></span> 25 - 50%</p>
+                              <p class="chart-label"><span style="background-color: #f8c3bb" class="dot"></span> 75% or higher</p> 
                           </div>
                         </div>
                     </div> <!--end of row -->
@@ -1024,7 +990,7 @@ html {
 
                 <div class="col-md-4">
                     
-                    <h1 class="chart-section-label">CLIENT SATISFACTION</h1>
+                    <h1 style="padding-left: 40px;" class="chart-section-label">OVERALL CLIENT SATISFACTION</h1>
                     <div class="spacer-41px"></div>
                     <div class="row">
                         <div class="col-sm-6">
@@ -1088,7 +1054,7 @@ html {
 
                     <div class="col-md-4">
                                         
-                        <h1 class="chart-section-label">EMOTIONAL INDEX SCORE</h1>
+                        <h1 style="padding-left: 10px;" class="chart-section-label">EMOTIONAL INDEX SCORE</h1>
                         <div class="spacer-41px"></div>
                         <div class="row">
                             <div class="col-sm-6">
@@ -1883,15 +1849,15 @@ html {
               <div class="row">
                     <div onclick="switchTab(), changeData_pre()" style="width: 33.3%" class="tab-container--active">
                         <p class="tab-label" id="sectionA">Pre-program</p>
-                        <p class="tab-dateRange">01/15/18 - 5/15/18</p>
+                        <p class="tab-dateRange">01/01/19 - 01/06/19</p>
                     </div>
                     <div onclick="switchTab(), changeData_mid()" style="width: 33.3%" class="tab-container">
                         <p id="sectionB" class="tab-label">Mid-program</p>
-                        <p class="tab-dateRange">06/15/18 - 11/15/18</p>
+                        <p class="tab-dateRange">01/07/19 - 02/11/19</p>
                     </div>   
                     <div onclick="switchTab(), changeData_post()" style="width: 30.7%" class="tab-container">
                         <p id="sectionC" class="tab-label">Post-program</p>
-                        <p class="tab-dateRange">12/15/18 - 5/15/19</p>
+                        <p class="tab-dateRange">02/12/19 - 04/01/19</p>
                     </div>                                         
                </div><!-- end of row -->
 
@@ -2265,7 +2231,7 @@ html {
 
                     <div class="row">
                         <div class="col-sm-7">
-                              <p class="tab-section-question">Pre-program: Increase positive perception of provider housing</p>
+                              <p class="tab-section-question">Pre-program: Increase positive perception of parents tending to child's needs</p>
                         </div>
 
                         <div class="col-sm-5">
@@ -2293,9 +2259,9 @@ html {
                       </div> <!-- end of tab-accordion-container -->
                 
                       <div style="padding-bottom: 20px" class="quesiton-container">
-                              <p class="question-header">1. Increased positive experience for client in provider housing</p>
+                              <p class="question-header">1. Increase positive experience of child re-entering parent's home </p>
                               <p class="questionORanswer">Question</p>
-                              <p class="questionORanswer-description">Does your client feel as though their experience in provider housing has been positive?</p>
+                              <p class="questionORanswer-description">Does your client feel as though their personal home is currently safe for them?</p>
                     
                               <p class="answer">Answer</p>
                       
@@ -2338,7 +2304,7 @@ html {
 
     <div class="row">
         <div class="col-sm-7">
-              <p class="tab-section-question"> Mid-program: Increase positive perception of provider housing</p>
+              <p class="tab-section-question"> Mid-program: Increase positive perception of parents tending to child's needs</p>
         </div>
 
         <div class="col-sm-5">
@@ -2366,9 +2332,9 @@ html {
       </div> <!-- end of tab-accordion-container -->
 
       <div style="padding-bottom: 20px" class="quesiton-container">
-              <p class="question-header">1. Increased positive experience for client in provider housing</p>
+              <p class="question-header">1. Increase positive experience of child re-entering parent's home</p>
               <p class="questionORanswer">Question</p>
-              <p class="questionORanswer-description">Does your client feel as though their experience in provider housing has been positive?</p>
+              <p class="questionORanswer-description">Does your client feel as though their personal home is currently safe for them?</p>
     
               <p class="answer">Answer</p>
       
@@ -2412,7 +2378,7 @@ html {
 
     <div class="row">
         <div class="col-sm-7">
-              <p class="tab-section-question">Post-program: Increase positive perception of provider housing</p>
+              <p class="tab-section-question">Post-program: Increase positive perception of parents tending to child's needs</p>
         </div>
 
         <div class="col-sm-5">
@@ -2440,9 +2406,9 @@ html {
       </div> <!-- end of tab-accordion-container -->
 
       <div style="padding-bottom: 20px" class="quesiton-container">
-              <p class="question-header">1. Increased positive experience for client in provider housing</p>
+              <p class="question-header">1. Increase positive experience of child re-entering parent's home</p>
               <p class="questionORanswer">Question</p>
-              <p class="questionORanswer-description">Does your client feel as though their experience in provider housing has been positive?</p>
+              <p class="questionORanswer-description">Does your client feel as though their personal home is currently safe for them?</p>
     
               <p class="answer">Answer</p>
       

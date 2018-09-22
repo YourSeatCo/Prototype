@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Washington County - Summary</title>
+    <title>Montgomery County - Summary</title>
     <link rel="icon" type="image/x-icon" href="Favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/header.css">
@@ -458,7 +458,10 @@ p + p {
     position: relative;
     top: 38px;
     left: -10px;
+}
 
+.fa-calendar-alt--lightbox{
+    top: 25px !important; 
 }
 
 a {
@@ -597,6 +600,41 @@ a:hover{
   background-color: #0a9cdf;
 }
 
+
+.ui-slider-range {
+   background:green;
+}
+.percent {
+  color:green;
+  font-weight:bold;
+  text-align:center;
+  width:100%;
+  border:none;
+}
+
+.nav-pills{
+  border: 1px solid #6c757d;;
+  color: #6c757d;
+  opacity: .65;
+  height: 40px;
+  width: 84px;
+  border-radius: 4px;
+  text-align: center;
+  position: relative;
+  padding-top: 7px;
+}
+
+.nav-pills--active{
+  color: #fff;
+  background-color: #6c757d;
+  /* height: 40px;
+  width: 84px; */
+  /* border-radius: 4px;
+  text-align: center;
+  position: relative;
+  padding-top: 7px; */
+}
+
 </style>
 
 
@@ -626,8 +664,8 @@ a:hover{
 
               <div class="row navigation-list-move-right">
                       <ul class="navigation-list">
-                        <li><a href="pages/response.html"  class="link" href="">Response</a></li><div class="divider">|</div> 
-                        <li><a href="pages/budget.html" class="link" href="">Budget</a></li><div class="divider">|</div> 
+                        <!-- <li><a href="pages/response.html"  class="link" href="">Response</a></li><div class="divider">|</div>  -->
+                        <li><a href="pages/budget.html" class="link" href="">Clients</a></li><div class="divider">|</div> 
                         <li><a href="pages/performance.html" class="link" href="">Performance</a></li><div class="divider">|</div> 
                         <li><a href="pages/summary.html" class="link link--currentPage" href="">Summary</a></li></div> 
                       </ul>
@@ -650,12 +688,13 @@ a:hover{
                           <div class="dropdown">
                              <label class="dropdown-label" for="">PROGRAMS</label>
                               <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div id="changeValue" class="dropdown-text-program1 dropdown-text">All | Human Services</div>
+                                <div id="changeValue" class="dropdown-text-program1 dropdown-text">All | Social Services</div>
                               </button>
                               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
                                 <a class="dropdown-item all dropdown-item-programs dropdown-item-top bold">All</a>
-                                <a class="dropdown-item childs-health dropdown-item-programs">Group Resident Housing</a>
-                                <a class="dropdown-item vets-health dropdown-item-programs ">Mobile Transporation</a>
+                                <a class="dropdown-item childs-health dropdown-item-programs">Family Reunification</a>
+                                <a class="dropdown-item vets-health dropdown-item-programs ">Substance Abuse & Preventation</a>
+                                <a class="dropdown-item vets-health dropdown-item-programs ">Foster Care</a>
                               </div>
                             </div>
 
@@ -668,7 +707,7 @@ a:hover{
                             <div class="dropdown">
                                 <label class="dropdown-label" for="">DATE RANGE</label>  
                                 <i class="fal fa-calendar-alt calendar data-range"></i> 
-                                <input class="btn btn-secondary dropdown-toggle calendar" type="text" name="daterange" value="01/01/2018 - 08/09/2018"/>
+                                <input class="btn btn-secondary dropdown-toggle calendar" type="text" name="daterange" value="01/01/2019 - 04/01/2019"/>
                                    
                               </div>
                         </div> 
@@ -695,32 +734,8 @@ a:hover{
                         <div class="row">
             
                                     <div class="col-sm-3">
-            
-                                      <div class="dropdown">
-                                         <label class="dropdown-label" for="">PROVIDER</label>
-                                          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <div id="changeValue-provider"  class="dropdown-text">All</div>
-                                          </button>
-                                          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
-                                            <a class="dropdown-item dropdown-item-provider">All</a> 
-                                            <a class="dropdown-item dropdown-item-provider bold">A Helping Hand</a> 
-                                            <a class="dropdown-item dropdown-item-provider childs-health">Union Gospel Mission</a>
-                                            <a class="dropdown-item dropdown-item-provider childs-health">The Family Place</a>
-                                            <a class="dropdown-item dropdown-item-provider childs-health">Naomi Family Residence</a>
-                                            <a class="dropdown-item dropdown-item-provider childs-health">Kingdom Pathways Outreach</a>
-                                            <a class="dropdown-item dropdown-item-provider childs-health">People Serving People</a>
-                                            <a class="dropdown-item dropdown-item-provider vets-health">The Refuge</a>
-                                            <a class="dropdown-item dropdown-item-provider vets-health">Stepping Stone Emergency</a>
-                                            <a class="dropdown-item dropdown-item-provider vets-health">Higher Ground Shelter</a>
-                                            
-                                          </div>
-                                        </div>
-            
-                                    </div>
-            
-                                    <div class="col-sm-3">
                             <div class="dropdown">
-                                <label class="dropdown-label" for="">CLIENT</label>
+                                <label class="dropdown-label" for="">CLIENTS</label>
                                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                    <div id="changeValue-client" class="dropdown-text">All</div>
                                  </button>
@@ -796,21 +811,6 @@ a:hover{
                                                
                             </script> 
 
-                                    <div class="col-sm-3">
-                            <div class="dropdown">
-                                <label class="dropdown-label" for="">SEGMENT</label>
-                                 <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                   <div class="dropdown-text">All</div>
-                                 </button>
-                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
-                                   <a class="dropdown-item bold" href="#">All</a>
-                                   <a class="dropdown-item" href="#">Non-medicare</a>
-                                   <a class="dropdown-item" href="#">Medicare</a>
-                                   <a class="dropdown-item" href="#">GRH-return</a>
-                                 </div>
-                            </div>
-                   
-                        </div> 
                         
                         </div><!--  end of row -->
 
@@ -824,13 +824,13 @@ a:hover{
                                   <div class="dropdown">
                                           <label class="dropdown-label" for="">AGENCY</label>
                                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <div class="dropdown-text">Human Services</div>
+                                            <div class="dropdown-text">Social Services</div>
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
                                             <a class="dropdown-item bold" href="#">All</a>
-                                            <a class="dropdown-item" href="#">Public Health</a>
-                                            <a class="dropdown-item" href="#">Housing</a>
+                                            <a class="dropdown-item" href="#">Health Deparment</a>
                                             <a class="dropdown-item" href="#">Human Services</a>
+                                            <a class="dropdown-item" href="#">Social Services</a>
                                           </div>
                                         </div>
 
@@ -843,11 +843,30 @@ a:hover{
                                   <div class="dropdown">
                                           <label class="dropdown-label" for="">COUNTY</label>
                                           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <div class="dropdown-text">Washington County</div>
+                                            <div class="dropdown-text">Montgomery County</div>
                                           </button>
                                           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">  
                                             <a class="dropdown-item bold" href="#">All</a>
-                                            <a class="dropdown-item" href="#">Washington County</a>
+                                            <a class="dropdown-item" href="#">Montgomery County</a>
+                                            <a class="dropdown-item" href="#">Lee County</a>
+                                            <a class="dropdown-item" href="#">Norton County</a>
+                                            <a class="dropdown-item" href="#">Wise County</a>
+                                            <a class="dropdown-item" href="#">Scott County</a>
+                                            <a class="dropdown-item" href="#">Dickenson County</a>  
+                                            <a class="dropdown-item" href="#">Buchanan County</a>  
+                                            <a class="dropdown-item" href="#">Tazewell County</a>  
+                                            <a class="dropdown-item" href="#">Russell County</a>  
+                                            <a class="dropdown-item" href="#">Washington County</a>  
+                                            <a class="dropdown-item" href="#">Smyth County</a>  
+                                            <a class="dropdown-item" href="#">Grayson County</a>  
+                                            <a class="dropdown-item" href="#">Wythe County</a>  
+                                            <a class="dropdown-item" href="#">Bland County</a>  
+                                            <a class="dropdown-item" href="#">Carroll County</a>  
+                                            <a class="dropdown-item" href="#">Pulaski County</a> 
+                                            <a class="dropdown-item" href="#">Giles County</a>  
+                                            <a class="dropdown-item" href="#">Radford County</a> 
+                                            <a class="dropdown-item" href="#">Galax County</a>   
+                                            <a class="dropdown-item" href="#">Patrick County</a>   
                                           </div>
                                         </div>
 
@@ -882,8 +901,8 @@ a:hover{
         <div class="spacer-16px"></div>
         <div class="row">
         <div class="no-col-padding col-md-6">
-          <h1 class="program-header">Group Resident Housing</h1>
-              <h2 class="program-description">Increase client's experience in provider housing providing food and shelter </h2>
+          <h1 class="program-header">Family Reunification</h1>
+              <h2 class="program-description">Increase client's parenting skills in supporting child's needs</h2>
         </div>
         
         <div class="col-md-6">
@@ -915,12 +934,12 @@ a:hover{
                         <div class="carousel-inner" role="listbox">
                           <div class="carousel-item active">
                               <div style="padding-left: 72px; padding-right: 72px;" class="alert alert-success" role="alert">
-                                  Within the time frame selected, the providers receiving the most frequent positive feedback are: <span class="dropdown-item-provider" style="text-decoration: underline">The Family Place</span> ,  <span class="dropdown-item-provider" style="text-decoration: underline"> People Serving People</span> & <span class="dropdown-item-provider" style="text-decoration: underline"> A Helping Hand</span> 
+                                  Nice! Within the time frame selected, the program's progressing nicely towards the positive response benchmark of 75%. Your top respondents include: <span class="provider-positive-feedback" style="text-decoration: underline">Alfred Alder</span> ,  <span class="provider-positive-feedback" style="text-decoration: underline"> David Byrne</span> & <span class="provider-positive-feedback" style="text-decoration: underline"> Harry Chapin</span> 
                                 </div>
                           </div>
                           <div class="carousel-item">
-                              <div style="padding-left: 72px; padding-right: 72px;" class="alert alert-danger" role="alert">
-                                  Within the time frame selected, the following providers  receiving the most frequent negative feedback are: <span class="provider-negative-feedback" style="text-decoration: underline">Stepping Stone Emergency</span> ,  <span class="provider-negative-feedback" style="text-decoration: underline"> Higher Ground Shelter </span> & <span class="provider-negative-feedback" style="text-decoration: underline"> The Refuge</span> 
+                              <div style="padding-left: 72px; padding-right: 72px;" class="alert alert-warning" role="alert">
+                                  Not so nice. Within the time frame selected, a few clients shared some not so great feedback. You may want to do some discovering: <span class="provider-negative-feedback" style="text-decoration: underline">Willis Cather</span> ,  <span class="provider-negative-feedback" style="text-decoration: underline"> Judy Chicago </span> & <span class="provider-negative-feedback" style="text-decoration: underline"> Dauten Dale</span> 
                                   
                                 </div>
                           </div>
@@ -950,137 +969,282 @@ a:hover{
                                 var text = $(event.target).text();
                                 console.log(text)
                                 var id = $(event.target.id)
-                                document.getElementById("changeValue-provider").innerHTML = text;
+                                document.getElementById("changeValue-client").innerHTML = text;
 
-   var dateRange =  $(".calendar")
+                                var dateRange =  $(".calendar")
 
-console.log(dateRange)
+                                console.log(dateRange)
 
-counter++
-previousNumber = counter - 1
-console.log(previousNumber)
-var array1 = [10, 20, 70, 86, 4, 10, 10, 30, 40]
-var array2 = [11, 4, 85, 66, 33, 1, 5, 15, 80]
-var array3 = [5, 20, 75, 80, 12, 8, 1, 65, 34]
-var array4 = [7, 3, 90, 44, 40, 16, 10, 2, 88]
-var array5 = [4, 8, 88, 62, 22, 16, 68, 9, 23]
-var array6 = [10, 20, 70, 44, 40, 16, 16, 22, 62]
-var array7 = [11, 4, 85, 62, 22, 16, 16, 40, 44]
-var array8 = [5, 20, 75, 50, 40, 20, 70, 8, 12, 80]
-var array9 = [7, 3, 90, 50, 33, 77, 57, 1, 33, 66]
-var array10 = [4, 8, 88, 50, 68, 23, 44, 10, 4, 86]
+                                counter++
+                                previousNumber = counter - 1
+                                console.log(previousNumber)
+                                var array1 = [10, 20, 70, 86, 4, 10, 10, 30, 40]
+                                var array2 = [11, 4, 85, 66, 33, 1, 5, 15, 80]
+                                var array3 = [5, 20, 75, 80, 12, 8, 1, 65, 34]
+                                var array4 = [7, 3, 90, 44, 40, 16, 10, 2, 88]
+                                var array5 = [4, 8, 88, 62, 22, 16, 68, 9, 23]
+                                var array6 = [10, 20, 70, 44, 40, 16, 16, 22, 62]
+                                var array7 = [11, 4, 85, 62, 22, 16, 16, 40, 44]
+                                var array8 = [5, 20, 75, 50, 40, 20, 70, 8, 12, 80]
+                                var array9 = [7, 3, 90, 50, 33, 77, 57, 1, 33, 66]
+                                var array10 = [4, 8, 88, 50, 68, 23, 44, 10, 4, 86]
 
-console.log(counter)
-$('.chart').each(function(index, elem){
+                                console.log(counter)
+                                $('.chart').each(function(index, elem){
+                                  
+                                  if (counter === counter ){
+                                    
+                                    var value = array1[index]
+                                    console.log(value)
+
+                                    console.log($(elem))
+                                    
+                                    $(elem).find('span').text(value)
+
+                                    $(elem).data('easyPieChart').update(value)
+
+                                  }
+
+                                  if (counter === 2){
+
+                                    var value = array2[index]
+                                    
+                                    $(elem).find('span').text(value)
+
+                                    $(elem).data('easyPieChart').update(value)
+
+                                  }
+
+                                  if (counter === 3){
+
+                                  var value = array3[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+                                  
+                                  if (counter === 4){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 5){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 6){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 7){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 8){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 9){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 10){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  counter = 0
+
+                                  }  
+
+                                })
+
   
-  if (counter === counter ){
-    
-    var value = array1[index]
-    console.log(value)
+                                });
 
-    console.log($(elem))
-    
-    $(elem).find('span').text(value)
 
-    $(elem).data('easyPieChart').update(value)
 
-  }
 
-  if (counter === 2){
+                              $(".provider-positive-feedback").click(function(event) {
+                                // $( ".applyBtn" ).click();
+                                var text = $(event.target).text();
+                                console.log(text)
+                                var id = $(event.target.id)
+                                document.getElementById("changeValue-client").innerHTML = text;
 
-    var value = array2[index]
-    
-    $(elem).find('span').text(value)
+                                var dateRange =  $(".calendar")
 
-    $(elem).data('easyPieChart').update(value)
+                                console.log(dateRange)
 
-  }
+                                counter++
+                                previousNumber = counter - 1
+                                console.log(previousNumber)
+                                var array1 = [88, 2, 8]
+                                var array2 = [94, 1, 6]
+                                var array3 = [86, 7, 7]
+                                var array4 = [99, 99, 99]
+                                var array5 = [88, 88, 88]
+                                var array6 = [77, 77, 77]
+                                var array7 = [11, 4, 85, 62, 22, 16, 16, 40, 44]
+                                var array8 = [5, 20, 75, 50, 40, 20, 70, 8, 12, 80]
+                                var array9 = [7, 3, 90, 50, 33, 77, 57, 1, 33, 66]
+                                var array10 = [4, 8, 88, 50, 68, 23, 44, 10, 4, 86]
 
-  if (counter === 3){
+                                console.log(counter)
+                                $('.chart').each(function(index, elem){
+                                  
+                                  if (counter === counter ){
+                                    
+                                    var value = array1[index]
+                                    console.log(value)
 
-  var value = array3[index]
+                                    console.log($(elem))
+                                    
+                                    $(elem).find('span').text(value)
 
-  $(elem).find('span').text(value)
+                                    $(elem).data('easyPieChart').update(value)
 
-  $(elem).data('easyPieChart').update(value)
+                                  }
 
-  }  
+                                  if (counter === 2){
+
+                                    var value = array2[index]
+                                    
+                                    $(elem).find('span').text(value)
+
+                                    $(elem).data('easyPieChart').update(value)
+
+                                  }
+
+                                  if (counter === 3){
+
+                                  var value = array3[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+                                  
+                                  if (counter === 4){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 5){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 6){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 7){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 8){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 9){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  }  
+
+                                  if (counter === 10){
+
+                                  var value = array4[index]
+
+                                  $(elem).find('span').text(value)
+
+                                  $(elem).data('easyPieChart').update(value)
+
+                                  counter = 0
+
+                                  }  
+
+                                })
+
   
-  if (counter === 4){
+                                });
 
-  var value = array4[index]
 
-  $(elem).find('span').text(value)
 
-  $(elem).data('easyPieChart').update(value)
-
-  }  
-
-  if (counter === 5){
-
-  var value = array4[index]
-
-  $(elem).find('span').text(value)
-
-  $(elem).data('easyPieChart').update(value)
-
-  }  
-
-  if (counter === 6){
-
-  var value = array4[index]
-
-  $(elem).find('span').text(value)
-
-  $(elem).data('easyPieChart').update(value)
-
-  }  
-
-  if (counter === 7){
-
-  var value = array4[index]
-
-  $(elem).find('span').text(value)
-
-  $(elem).data('easyPieChart').update(value)
-
-  }  
-
-  if (counter === 8){
-
-  var value = array4[index]
-
-  $(elem).find('span').text(value)
-
-  $(elem).data('easyPieChart').update(value)
-
-  }  
-
-  if (counter === 9){
-
-  var value = array4[index]
-
-  $(elem).find('span').text(value)
-
-  $(elem).data('easyPieChart').update(value)
-
-  }  
-
-  if (counter === 10){
-
-  var value = array4[index]
-
-  $(elem).find('span').text(value)
-
-  $(elem).data('easyPieChart').update(value)
-
-  counter = 0
-
-  }  
-
-})
-
-});
 
 </script>
                                   
@@ -1089,10 +1253,8 @@ $('.chart').each(function(index, elem){
                         
                         <h1 class="chart-label">POSITIVE</h1>
                         <div class="spacer-41px"></div>
-                        <div class="chart chart1 easyPieChart" data-percent="60" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">60</span>%<canvas width="290" height="290"></canvas></div>
-                        <div class="spacer-41px"></div>
-            
-                        <h1 class="chart-label"> <i class="fa fa-long-arrow-up fa-long-arrow-up-positive"></i> 7% since last month</h1>
+                        <div class="chart chart1 easyPieChart" data-percent="72" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">72</span>%<canvas width="290" height="290"></canvas></div>
+
                     </div> <!-- end of col-md-4 -->
   
                     <div class="col-md-4">
@@ -1100,19 +1262,15 @@ $('.chart').each(function(index, elem){
                         <h1 class="chart-label">NEUTRAL</h1>
                         <div class="spacer-41px"></div>
                         <div class="chart chart2 easyPieChart" data-percent="10" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">10</span>%<canvas width="290" height="290"></canvas></div>
-                        <div class="spacer-41px"></div>
-  
-                        <h1 class="chart-label"> <i class="fa fa-long-arrow-down fa-long-arrow-neutral"></i> 11% since last month</h1>
+
                     </div> <!-- end of col-md-4 -->
   
                     <div class="col-md-4">
                         
                         <h1 class="chart-label">NEGATIVE</h1>
                         <div class="spacer-41px"></div>
-                        <div class="chart chart3 easyPieChart" data-percent="30" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">30</span>%<canvas width="290" height="290"></canvas></div>
-                        <div class="spacer-41px"></div>
-  
-                        <h1 class="chart-label"> <i class="fa fa-long-arrow-up fa-long-arrow-negative"></i> 3% since last month</h1>
+                        <div class="chart chart3 easyPieChart" data-percent="18" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">18</span>%<canvas width="290" height="290"></canvas></div>
+
                     </div> <!-- end of col-md-4 -->
                     
                 </div>
@@ -1128,7 +1286,7 @@ $('.chart').each(function(index, elem){
 
 <div style="position: relative; z-index: 1;display: none;width:1110px; background-color: #fff" id="trueModal-1">
     <div class="modal-header-padding">
-        <h2 class="modal-header--yourSeat">Group Resident Housing</h2>
+        <h2 class="modal-header--yourSeat">Family Reunification</h2>
     </div>
 
     <nav style="border-bottom: 1px solid #D5D9DE; float: left; height: 633px; width: 160px">
@@ -1154,6 +1312,16 @@ $('.chart').each(function(index, elem){
             <label class="sectionB numberCircle--text--inactive" for="">Permissions</label>
         </div>
 
+        <!-- <div onclick="showMe()" style="display: inherit" class="sectionC numberCircle-container numberCircle-container--inactive">
+          <label class="sectionB numberCircle numberCircle--inactive" for="">3</label>
+          <label class="sectionB numberCircle--text--inactive" for="">Benchmarks</label>
+      </div>
+
+      <div onclick="showMe()" style="display: inherit" class="sectionD numberCircle-container numberCircle-container--inactive">
+        <label class="sectionB numberCircle numberCircle--inactive" for="">4</label>
+        <label class="sectionB numberCircle--text--inactive" for="">Insights</label>
+    </div> -->
+
   </nav>
 
   <div class="sections-container" style=" height: 633px; float: right; width: 950px; overflow-y: scroll; overflow-x: hidden">
@@ -1166,8 +1334,8 @@ $('.chart').each(function(index, elem){
 
                   <div class="col-sm-3">
 
-                          <label class="dropdown-label" for="">PROGRAMS</label> 
-                          <h1 style="color: #494949;font-size: 14px; font-weight: 200">Group Resident Housing</h1>
+                          <label class="dropdown-label" for="">PROGRAM</label> 
+                          <h1 style="color: #494949;font-size: 14px; font-weight: 200">Family Reunification</h1>
 
                   </div>
 
@@ -1183,7 +1351,7 @@ $('.chart').each(function(index, elem){
                 <div class="col-sm-3">
 
                     <label class="dropdown-label" for="">COUNTY</label> 
-                    <h1 style="color: #494949;font-size: 14px; font-weight: 200">Washington County</h1>
+                    <h1 style="color: #494949;font-size: 14px; font-weight: 200">Montgomery County</h1>
 
               </div>     
 
@@ -1191,11 +1359,37 @@ $('.chart').each(function(index, elem){
               <div class="col-sm-3">
 
                   <label class="dropdown-label" for="">STATE</label> 
-                  <h1 style="color: #494949;font-size: 14px; font-weight: 200">MN</h1>
+                  <h1 style="color: #494949;font-size: 14px; font-weight: 200">VA</h1>
 
             </div>     
 
                 </div><!--  end of row -->
+
+            <div style="height: 21px;"></div>
+                
+            <div class="row">
+              <div class="col-sm-6">
+                  
+                  <label class="dropdown-label" for="">CURRENT ADDRESS</label> 
+                  <h1 style="color: #494949;font-size: 14px; font-weight: 200">110 Roanoke St, Christiansburg, VA 24073</h1>
+
+              </div>
+
+              <div class="col-sm-3">
+                  
+                  <label class="dropdown-label" for="">BUS ACCESSIBLE</label> 
+                  <h1 style="color: #494949;font-size: 14px; font-weight: 200">Yes</h1>
+
+              </div>  
+
+              <div class="col-sm-3">
+                  
+                  <label class="dropdown-label" for="">METRO ACCESSIBLE</label> 
+                  <h1 style="color: #494949;font-size: 14px; font-weight: 200">No</h1>
+
+              </div>                
+            
+           </div>
 
 
                 <div style="height: 21px"></div>
@@ -1206,14 +1400,207 @@ $('.chart').each(function(index, elem){
 
                     <div class="col-sm-12">
 
-                        <textarea style="padding-left: 11px; padding-top: 11px; color: #494949; font-size: 14px; width: 100%; border-radius: 3px; border: 1px solid #B5B5B5; height: 400px" name="" id="" cols="30" rows="10" placeholder="fadf">Group residential housing or GRH, aspires to place individuals in need of housing in services in to a safe location to receive food and shelter. Reside Group residential housing or GRH, aspires to place individuals in need of housing in.</textarea>
+                        <textarea style="padding-left: 11px; padding-right: 3px; padding-top: 11px; color: #494949; font-size: 14px; width: 100%; border-radius: 3px; border: 1px solid #B5B5B5; height: 266px" name="" id="" cols="30" rows="10" placeholder="fadf">The Family Reunification program is designed to increase parenting skills and stability, in order to facilitate family reunification</textarea>
                                  
 
                     </div>
 
 
-                  </div><!--  end of row -->
+                </div><!--  end of row -->
 
+                <!-- <div style="height: 21px"></div> -->
+
+                <hr>
+
+                <div style="height: 21px"></div>
+
+                <div style="height: 21px"></div>
+
+                <i style="color: red;" class="fas fa-exclamation-triangle"></i>The information below can no longer be updated, since the program is currently in-progress.
+
+                <div style="height: 21px"></div>
+
+                <div class="row">
+            
+                  <div class="col-sm-6">
+
+                    <div class="dropdown">
+                       <label class="dropdown-label" for="">ASSIGNMENT</label>
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <div id="changeValue-provider" class="dropdown-text">Random</div>
+                
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+                          <a class="dropdown-item dropdown-item-provider">All</a> 
+                          <a class="dropdown-item dropdown-item-provider bold">Child Care Services</a> 
+                          <a class="dropdown-item dropdown-item-provider childs-health">Adult Foster Care</a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">The Family Place</a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">Cash Assistance</a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">Food Assistance </a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">Medical Assistance</a>
+                        </div>
+                      </div>
+
+                  </div>  
+                </div>
+
+
+
+
+                
+                
+                <div style="height: 21px"></div>
+
+                <label class="dropdown-label" for="">TAGS</label><div style="padding-left: 5px;" class="fal fa-pencil-alt"></div>
+
+                <div class="row">
+
+                    <div class="col-sm-12">
+                                 <span style="color: #494949;font-size: 14px; font-weight: 200">Parental Education, Child Welfare, Social Services</span>
+
+                    </div>
+
+
+                </div><!--  end of row -->
+
+
+                <div style="height: 21px"></div>
+
+                <label class="dropdown-label" for="">SUCCESS BENCHMARK</label><div style="padding-left: 5px;"></div>
+
+                <div class="row">
+
+                    <div class="col-sm-6">
+                                 <span style="color: #494949;font-size: 14px; font-weight: 200">Positive</span>
+                                 <ul style="color: red;" class="nav">
+                                    <li class="nav-pills">0%</li>
+                                    <li class="nav-pills">25%</li>
+                                    <li class="nav-pills">50%</li>
+                                    <li class="nav-pills nav-pills--active">75%</li>
+                                    <li class="nav-pills">100%</li>
+                                  </ul>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <span style="color: #494949;font-size: 14px; font-weight: 200">Negative</span>
+                        <ul style="color: red;" class="nav">
+                           <li class="nav-pills">0%</li>
+                           <li class="nav-pills nav-pills--active">25%</li>
+                           <li class="nav-pills">50%</li>
+                           <li class="nav-pills">75%</li>
+                           <li class="nav-pills">100%</li>
+                         </ul>
+                    </div>
+
+
+                </div><!--  end of row -->
+
+                <div style="height: 6px"></div>
+
+                <div class="row">
+
+                
+                    <div class="col-sm-6">
+                        <span style="color: #494949;font-size: 14px; font-weight: 200">Date Range</span>
+                        <div style="position: relative; top: -12px;" class="dropdown">
+                            <i class="fal fa-calendar-alt fa-calendar-alt--lightbox calendar"></i> 
+                            <input class="btn btn-secondary dropdown-toggle data-range calendar disabled" type="text" name="daterange" value="01/01/2019 - 04/01/2019"/>
+                               
+                          </div>
+                  </div>
+
+                </div>
+
+                
+
+                <div style="height: 15px"></div>
+
+                <div class="row">
+            
+                  <div class="col-sm-6">
+
+                    <div class="dropdown">
+                       <label class="dropdown-label" for="">RELATED PROGRAMS</label>
+                       
+                       <div style="height: 1px"></div>
+                        <span style="color: #494949;font-size: 14px; font-weight: 200">State Approved</span>
+                        <button class="btn btn-secondary dropdown-toggle disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        
+
+                        <div id="changeValue-provider" class="dropdown-text">Parent to Parent Coaching</div>
+                
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+                          <a class="dropdown-item dropdown-item-provider">All</a> 
+                          <a class="dropdown-item dropdown-item-provider bold">Child Care Services</a> 
+                          <a class="dropdown-item dropdown-item-provider childs-health">Adult Foster Care</a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">The Family Place</a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">Cash Assistance</a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">Food Assistance </a>
+                          <a class="dropdown-item dropdown-item-provider childs-health">Medical Assistance</a>
+                        </div>
+                      </div>
+
+                      <i style="color: #929da7; font-size: 12px" class="fas fa-plus"></i> <span style="color: #929da7; font-size: 12px">Add State Approved Program</span>
+
+                      <div style="height: 15px"></div>
+
+                  </div>  
+      
+      </div>
+
+      <!-- <div style="height: 16px"></div> -->
+
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 99%;">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+              <div style="padding-left: 22px; padding-right: 22px; display: none;" class="alert alert-info" role="alert">
+                  We found <span style="text-decoration: underline">51 clients</span> from Adult Foster Care program within your Parent Training program. Once your Parent Training program ends (2/15/2019), we'll begin recommending additional programs for those clients.
+                  
+                </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <div class="col-sm-6">
+              <!-- <div style="height: 32px"></div> -->
+             <span style="color: #494949;font-size: 14px; font-weight: 200">Previously Created</span>
+
+            <button class="btn btn-secondary dropdown-toggle disabled" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              
+              <div id="changeValue-provider" class="dropdown-text">In-home Counseling</div>
+  
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"> 
+              <a class="dropdown-item dropdown-item-provider">All</a> 
+              <a class="dropdown-item dropdown-item-provider bold">Child Care Services</a> 
+              <a class="dropdown-item dropdown-item-provider childs-health">Adult Foster Care</a>
+              <a class="dropdown-item dropdown-item-provider childs-health">The Family Place</a>
+              <a class="dropdown-item dropdown-item-provider childs-health">Cash Assistance</a>
+              <a class="dropdown-item dropdown-item-provider childs-health">Food Assistance </a>
+              <a class="dropdown-item dropdown-item-provider childs-health">Medical Assistance</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div style="height: 8px"></div> -->
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="width: 99%; display: none;">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div style="padding-left: 22px; padding-right: 22px;" class="alert alert-info" role="alert">
+                    We found <span style="text-decoration: underline">2 clients</span> from Residental Placement Care program within your Parent Training program. Once your Parent Training program ends (2/15/2019), we'll begin recommending additional programs for those clients.
+                    
+                  </div>
+            </div>
+          </div>
+          
+      </div>
+
+        
+      <i style="color: #929da7; font-size: 12px" class="fas fa-plus"></i> <span style="color: #929da7; font-size: 12px">Add Previously Created Program</span>
+          
+      <div style="height: 21px"></div>
 
         </div>
   
@@ -1225,18 +1612,18 @@ $('.chart').each(function(index, elem){
 
           <div style="padding-left: 29px; padding-right: 29px;" class="row">
               <div style="border-bottom: 1px solid #D5D9DE; padding-bottom: 32px" class="col-sm-1">
-                  <label class="userCircle" for="">CS</label>
+                  <label class="userCircle" for="">LL</label>
               </div>
 
-              <div style="border-bottom: 1px solid #D5D9DE" class="col-sm-4">
+              <div style="border-bottom: 1px solid #D5D9DE" class="col-sm-6">
                     <ul style="list-style-type: none"> 
-                      <li style="color: #494949; font-size: 20px;">Chris Sorensen</li>
-                      <li style="color: #4C4F55; font-size: 14px;">Director | Human Services</li>
-                      <li style="color: #6096E0; font-size: 14px;">chris.sorensen@co.washington.mn.us</li>
+                      <li style="color: #494949; font-size: 20px;">Larry Lindsey</li>
+                      <li style="color: #4C4F55; font-size: 14px;">Director | (540) 382-6990, x53420</li>
+                      <li style="color: #0a9cdf; font-size: 14px;">larry.lindsey@dss.virginia.gov</li>
                     </ul>
               </div>
 
-              <div style="border-bottom: 1px solid #D5D9DE" class="col-md-7">
+              <div style="border-bottom: 1px solid #D5D9DE" class="col-md-5">
                   <div class="wrap">
                     <div class="control-box-view">
                         <i class="fal fa-trash-alt icon-center"></i>
@@ -1258,18 +1645,18 @@ $('.chart').each(function(index, elem){
 
           <div style="padding-left: 29px; padding-right: 29px;" class="row">
               <div style="border-bottom: 1px solid #D5D9DE; padding-bottom: 32px" class="col-sm-1">
-                  <label class="userCircle" for="">PG</label>
+                  <label class="userCircle" for="">KE</label>
               </div>
 
-              <div style="border-bottom: 1px solid #D5D9DE" class="col-sm-4">
+              <div style="border-bottom: 1px solid #D5D9DE" class="col-sm-7">
                     <ul style="list-style-type: none">
-                      <li style="color: #494949; font-size: 20px;">Paula Graham</li>
-                      <li style="color: #4C4F55; font-size: 14px;">A Helping Hand | A Helping Hand</li>
-                      <li style="color: #6096E0; font-size: 14px;">paula.graham@helpinghand.com</li>
+                      <li style="color: #494949; font-size: 20px;">Kelly Edmonson</li>
+                      <li style="color: #4C4F55; font-size: 14px;">Program Manager/Family Supervisor | (540) 382-6990, x53465</li>
+                      <li style="color: #0a9cdf; font-size: 14px;">kelly.edmonson@dss.virginia.gov</li>
                     </ul>
               </div>
 
-              <div style="border-bottom: 1px solid #D5D9DE" class="col-md-7">
+              <div style="border-bottom: 1px solid #D5D9DE" class="col-md-4">
                   <div class="wrap">
                     <div class="control-box-view">
                         <i class="fal fa-trash-alt icon-center"></i>
@@ -1286,45 +1673,21 @@ $('.chart').each(function(index, elem){
                 </div>
     
           </div>
-
-          <div style="height:32px"></div>
-
-          <div style="padding-left: 29px; padding-right: 29px;" class="row">
-              <div style="border-bottom: 1px solid #D5D9DE; padding-bottom: 32px" class="col-sm-1">
-                  <label class="userCircle" for="">AH</label>
-              </div>
-
-              <div style="border-bottom: 1px solid #D5D9DE" class="col-sm-4">
-                    <ul style="list-style-type: none">
-                      <li style="color: #494949; font-size: 20px;">Alex Haley</li>
-                      <li style="color: #4C4F55; font-size: 14px;">Program Manager | Human Services</li>
-                      <li style="color: #6096E0; font-size: 14px;">alex.haley@co.washington.mn.us</li>
-                      
-                    </ul>
-              </div>
-
-              <div style="border-bottom: 1px solid #D5D9DE" class="col-md-7">
-                  <div class="wrap">
-                    <div class="control-box-view">
-                        <i class="fal fa-trash-alt icon-center"></i>
-                        <label class="icon-label" for="">Delete</label>
-                    </div>
-                    <div class="control-box-edit">
-                        <i id="edit" data-fancybox data-options='{"enableEscapeButton": "true"}'  data-src="#trueModal-1" data-modal="true" href="javascript:;" class="fal fa-pencil-alt icon-center"></i>
-                        <label class="icon-label" for="">Edit</label>
-                    </div>
-                  </div>
-               
-                  <div style="height: 20px"></div>
-               
-                </div>
-    
-          </div>
-
-        
   
 
         <div style="padding-left: 29px; padding-right: 29px;" class="row">
+
+                <div class="col-sm-6">
+                    <div style="height: 32px;"></div>
+                    <label class="dropdown-label" for="">FIRST NAME</label>
+                    <input class="form-control" type="text">
+               </div>
+
+               <div class="col-sm-6">
+                  <div style="height: 32px;"></div>
+                  <label class="dropdown-label" for="">LAST NAME</label>
+                  <input class="form-control" type="text">
+             </div>            
 
                 <div class="col-sm-6">
                       <div style="height: 32px;"></div>
@@ -1350,36 +1713,41 @@ $('.chart').each(function(index, elem){
 
             <div class="col-sm-12">
                   <div style="height: 32px;"></div>
-                  <label class="dropdown-label" for="">PROVIDER (optional)</label>
-                  <input class="form-control" type="text">
-            </div>
-
-        </div>
-
-        <div style="padding-left: 29px; padding-right: 29px;" class="row">
-
-            <div class="col-sm-12">
-                  <div style="height: 32px;"></div>
                   <label class="dropdown-label" for="">USER PERMISSIONS</label>
+
+
+                  <div style="padding-left: 21px; padding-top: 10px;" class="radio">
+                      <label style="font-size: 14px;"><input type="radio" name="optradio" checked>
+                          <span style="color: #494949; font-weight: 500">Provider</span>
+                          <br>
+                          <span>Can only comment on their clients' surveys</span> 
+                      </label>
+                  </div>
+
+
+
                   <div style="padding-left: 21px; padding-top: 10px;" class="radio">
                       <label style="font-size: 14px;"><input type="radio" name="optradio" checked>
                           <span style="color: #494949; font-weight: 500">Social Worker</span>
                           <br>
-                          <span>The user is allowed to ullamco laboris nisi ut aliquip ex ea commodo consequa</span> 
+                          <span>Can only view data and access surveys for their clients</span> 
                       </label>
                   </div>
+
+
+
                   <div style="padding-left: 21px; padding-top: 10px;" class="radio">
                       <label style=" color: #494949;font-size: 14px;" ><input type="radio" name="optradio" checked>
                         <span style="color: #494949; font-weight: 500">Program Analyst</span>
                         <br>
-                        <span>The user is allowed to ullamco laboris nisi ut aliquip ex ea commodo consequa</span> 
+                        <span>Can only view data and access surveys for their program</span> 
                       </label>
                   </div>
                   <div style="padding-left: 21px; padding-top: 10px;" class="radio">
                       <label style=" color: #494949;font-size: 14px;" ><input type="radio" name="optradio" checked>
-                        <span style="color: #494949; font-weight: 500">Program Manager/Unit Supervisor</span>
+                        <span style="color: #494949; font-weight: 500">Program Manager/Family Supervisor</span>
                         <br>
-                        <span>The user is allowed to ullamco laboris nisi ut aliquip ex ea commodo consequa</span> 
+                        <span>Can only view programs within their department</span> 
                       </label>
                   </div>
 
@@ -1387,7 +1755,7 @@ $('.chart').each(function(index, elem){
                       <label style="color: #494949; font-size: 14px;" ><input type="radio" name="optradio" checked>
                         <span style="color: #494949; font-weight: 500">Assistant Director</span>
                         <br>
-                        <span>The user is allowed to ullamco laboris nisi ut aliquip ex ea commodo consequa</span> 
+                        <span>Can only view departments, and supporting data, within their county</span> 
                       </label>
                   </div>
 
@@ -1395,15 +1763,7 @@ $('.chart').each(function(index, elem){
                       <label style="color: #494949; font-size: 14px;" ><input type="radio" name="optradio" checked>
                         <span style="color: #494949; font-weight: 500">Director</span>
                         <br>
-                        <span>The user is allowed to ullamco laboris nisi ut aliquip ex ea commodo consequa</span> 
-                      </label>
-                  </div>
-
-                  <div style="padding-left: 21px; padding-top: 10px;" class="radio">
-                      <label style="color: #494949; font-size: 14px;" ><input type="radio" name="optradio" checked>
-                        <span style="color: #494949; font-weight: 500">Provider</span>
-                        <br>
-                        <span>The user is allowed to ullamco laboris nisi ut aliquip ex ea commodo consequa</span> 
+                        <span>Can only view agencies, and supporting data, within their state</span> 
                       </label>
                   </div>
 
@@ -1420,8 +1780,83 @@ $('.chart').each(function(index, elem){
     </section>
 
     
-     <section>
+     <section style="padding-left: 29px; padding-right: 29px" id="section3" class="hide">
 
+    <div class="row">
+      <div class="col-sm-3">
+
+        <div style="height: 32px"></div>
+        <label class="dropdown-label" for="">Positive</label> 
+        <h1 style="color: #494949;font-size: 14px; font-weight: 200">70%</h1>
+
+      </div>
+
+      <div class="col-sm-3">
+
+        <div style="height: 32px"></div>
+        <label class="dropdown-label" for="">Neutral</label> 
+        <h1 style="color: #494949;font-size: 14px; font-weight: 200">10%</h1>
+
+      </div>
+
+      <div class="col-sm-3">
+
+          <div style="height: 32px"></div>
+          <label class="dropdown-label" for="">Negative</label> 
+          <h1 style="color: #494949;font-size: 14px; font-weight: 200">20%</h1>
+  
+        </div>
+
+    </div>
+
+
+<script>
+$(function() {
+  $('.project').each(function() {
+    var $projectBar = $(this).find('.bar');
+    var $projectPercent = $(this).find('.percent');
+    var $projectRange = $(this).find('.ui-slider-range');
+    $projectBar.slider({
+      range: "min",
+      animate: true,
+      value: 1,
+      min: 0,
+      max: 100,
+      step: 1,
+      slide: function(event, ui) {
+        $projectPercent.val(ui.value + "%");
+      },
+      change: function(event, ui) {
+        var $projectRange = $(this).find('.ui-slider-range');
+        var percent = ui.value;
+        if (percent < 30) {
+          $projectPercent.css({
+            'color': 'red'
+          });
+          $projectRange.css({
+            'background': '#f20000'
+          });
+        } else if (percent > 31 && percent < 70) {
+          $projectPercent.css({
+            'color': 'gold'
+          });
+          $projectRange.css({
+            'background': 'gold'
+          });
+        } else if (percent > 70) {
+          $projectPercent.css({
+            'color': 'green'
+          });
+          $projectRange.css({
+            'background': 'green'
+          });
+        }
+      }
+    });
+  })
+})
+
+</script>    
             
       </section>
 
@@ -1506,7 +1941,7 @@ $('.chart').each(function(index, elem){
                else if (clickedItem === "sectionC"){
    
                 var section1 = document.getElementById("section1")
-                 $(section1).removeClass("hide")
+                 $(section1).addClass("hide")
 
                  var section2 = document.getElementById("section2")
                  $(section2).addClass("hide")
@@ -1569,7 +2004,7 @@ $('.chart').each(function(index, elem){
                         
                         <h1 class="chart-label">POSITIVE</h1>
                         <div class="spacer-41px"></div>
-                        <div class="chart chart5 easyPieChart" data-percent="60" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">60</span>%<canvas width="290" height="290"></canvas></div>
+                        <div class="chart chart5 easyPieChart" data-percent="72" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">72</span>%<canvas width="290" height="290"></canvas></div>
                         <div class="spacer-41px"></div>
             
                         <h1 class="chart-label"> <i class="fa fa-long-arrow-up fa-long-arrow-up-positive"></i> 7% since last month</h1>
@@ -1589,7 +2024,7 @@ $('.chart').each(function(index, elem){
                         
                         <h1 class="chart-label">NEGATIVE</h1>
                         <div class="spacer-41px"></div>
-                        <div class="chart chart7 easyPieChart" data-percent="30" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">30</span>%<canvas width="290" height="290"></canvas></div>
+                        <div class="chart chart7 easyPieChart" data-percent="18" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">18</span>%<canvas width="290" height="290"></canvas></div>
                         <div class="spacer-41px"></div>
   
                         <h1 class="chart-label"> <i class="fa fa-long-arrow-up fa-long-arrow-negative"></i> 3% since last month</h1>
@@ -1644,7 +2079,7 @@ $('.chart').each(function(index, elem){
                         
                         <h1 class="chart-label">POSITIVE</h1>
                         <div class="spacer-41px"></div>
-                        <div class="chart chart7 easyPieChart" data-percent="60" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">60</span>%<canvas width="290" height="290"></canvas></div>
+                        <div class="chart chart7 easyPieChart" data-percent="72" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">60</span>%<canvas width="290" height="290"></canvas></div>
                         <div class="spacer-41px"></div>
             
                         <h1 class="chart-label"> <i class="fa fa-long-arrow-up fa-long-arrow-up-positive"></i> 7% since last month</h1>
@@ -1664,7 +2099,7 @@ $('.chart').each(function(index, elem){
                         
                         <h1 class="chart-label">NEGATIVE</h1>
                         <div class="spacer-41px"></div>
-                        <div class="chart chart9 easyPieChart" data-percent="30" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">30</span>%<canvas width="290" height="290"></canvas></div>
+                        <div class="chart chart9 easyPieChart" data-percent="18" style="width: 290px; height: 290px; line-height: 290px;"><span class="chart-data">30</span>%<canvas width="290" height="290"></canvas></div>
                         <div class="spacer-41px"></div>
   
                         <h1 class="chart-label"> <i class="fa fa-long-arrow-up fa-long-arrow-negative"></i> 3% since last month</h1>
